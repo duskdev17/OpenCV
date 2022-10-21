@@ -1,7 +1,7 @@
 from ctypes import resize
 import cv2 as cv
 
-img = cv.imread('Photos/moscow.jpg')
+img = cv.imread('Photos/forest.jpg')
 cv.imshow('img', img)
 
 
