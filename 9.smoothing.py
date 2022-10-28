@@ -21,6 +21,13 @@ median = cv.medianBlur(img, 3)
 cv.imshow('Median Blur', median)
 
 
+# Bilateral Blur
+bilateral = cv.bilateralFilter(img, 10, 35, 15)
+cv.imshow('Bilateral', bilateral)
+
+
+
+
 
 
 
