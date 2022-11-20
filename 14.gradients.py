@@ -4,7 +4,7 @@ import numpy as np
 
 
 #img = cv.imread('Photos/moscow2.jpg')
-img = cv.imread('Photos/forest.jpg')
+img = cv.imread('Photos/ubisoft.jpg')
 cv.imshow('Image', img)
 
 
@@ -20,7 +20,7 @@ cv.imshow('Gray', gray)
 
 
 # laplacian edges
-lap = cv.Laplacian(img, cv.CV_64F)
+lap = cv.Laplacian(gray, cv.CV_64F)
 lap = np.uint8(np.absolute(lap))
 cv.imshow('Laplacian', lap)
 
@@ -28,6 +28,13 @@ cv.imshow('Laplacian', lap)
 
 
 
+
+# Sobel 
+sobelx = cv.Sobel(gray, cv.CV_64F, 1, 0)
+sobely = cv.Sobel(gray, cv.CV_64F, 0, 1)
+
+cv.imshow('Sobelx', sobelx)
+cv.imshow('Sobely', sobely)
 
 
 
