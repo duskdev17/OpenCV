@@ -4,7 +4,7 @@ import numpy as np
 
 
 #img = cv.imread('Photos/moscow2.jpg')
-img = cv.imread('Photos/ubisoft.jpg')
+img = cv.imread('Photos/forest.jpg')
 cv.imshow('Image', img)
 
 
@@ -32,9 +32,20 @@ cv.imshow('Laplacian', lap)
 # Sobel 
 sobelx = cv.Sobel(gray, cv.CV_64F, 1, 0)
 sobely = cv.Sobel(gray, cv.CV_64F, 0, 1)
+sobel_combined = cv.bitwise_or(sobelx, sobely)
 
 cv.imshow('Sobelx', sobelx)
 cv.imshow('Sobely', sobely)
+cv.imshow('Combined Sobel', sobel_combined)
+
+
+
+
+
+
+# Canny 
+canny = cv.Canny(gray, 150, 175)
+cv.imshow('Canny', canny)
 
 
 
